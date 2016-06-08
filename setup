@@ -15,8 +15,8 @@ echo 'Assumes Ubuntu 16.04 Desktop 64-bit'
 echo ' '
 echo 'Applying system software updates...'
 
-# sudo apt update
-# sudo apt -y dist-upgrade
+sudo apt update
+sudo apt -y dist-upgrade
 
 # This could be true if the setup script was obtained from a source other than github
 
