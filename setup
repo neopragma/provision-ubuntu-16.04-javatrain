@@ -38,3 +38,9 @@ fi
 
 "./$COMMON_DIR/install_development_basics"
 "./$COMMON_DIR/install_java_development_tools"
+
+if [ ! -f "$HOME/Desktop/help.html" ]; then
+    echo ' '
+    echo "Copying help file to $HOME/Desktop"
+    cp help.html "$HOME/Desktop/help.html"
+fi
