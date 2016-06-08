@@ -17,7 +17,7 @@ git clone http://github.com/neopragma/provision-ubuntu-16.04-javatrain
 ```
 
 
-<h3>3. Change to the repo directory and run the setup Script
+<h3>3. Change to the repo directory and run the setup Script</h3>
 
 ```shell
 cd provision-ubuntu-16.04-javatrain
