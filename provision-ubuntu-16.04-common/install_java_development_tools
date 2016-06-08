@@ -1,0 +1,33 @@
+#!/bin/bash
+#=================================================================================
+# Install packages for Ubuntu 16.04 Desktop necessary for Java development.
+#
+# Version: 1.0.0
+# Date: 07 Jun 2016
+# Author: Dave Nicolette
+#=================================================================================
+
+echo ' '
+echo 'Installing Java development tools'
+echo '    OpenJDK 8 headless'
+echo '    Maven'
+echo '    Eclipse JEE Mars'
+
+sudo apt install -y \
+    openjdk-8-jdk-headless \
+    maven
+
+if [ -f /opt/eclipse/eclipse ]; then
+    echo ' '
+    echo 'eclipse found at /opt/eclipse/eclipse; skipping installation'
+else
+    "./$COMMON_DIR/install_eclipse_jee_mars"
+fi
+
+echo ' '
+echo 'Setting Unity launcher favorites suitable for a Java development environment'
+gsettings set com.canonical.Unity.Launcher favorites "['nautilus.desktop', 'firefox.desktop', 'eclipse.desktop', 'atom.desktop', 'gnome-terminal.desktop']"
+
+echo ' '
+echo 'Setting a Java-themed desktop background image'
+gsettings set org.gnome.desktop.background picture-uri "file:///$INSTALL_DIR/background.jpg"
