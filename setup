@@ -33,7 +33,7 @@ export COMMON_DIR="provision-ubuntu-16.04-common"
 # On a re-run of the setup script, this repo will already have been cloned
 
 if [ ! -f "$COMMON_DIR" ]; then
-    git clone "git://github.com/training/$COMMON_DIR"
+    git clone "git://github.com/neopragma/$COMMON_DIR"
 fi
 
 "./$COMMON_DIR/install_development_basics"
